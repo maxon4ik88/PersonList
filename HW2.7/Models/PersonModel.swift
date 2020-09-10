@@ -9,10 +9,10 @@
 import Foundation
 
 struct Person {
-    let name: String
-    let secondName: String
-    let phoneNumber: String
-    let emailAddress: String
+    var name: String = "someName"
+    var secondName: String = "someSecondName"
+    var phoneNumber: String = "somePhone"
+    var emailAddress: String = "someEmail"
     
     var fullName: String {
         
@@ -21,48 +21,25 @@ struct Person {
     }
     
     init() {
-        if let randomName = DataManager.names.randomElement() {
-            self.name = randomName
-            for (index, name) in DataManager.names.enumerated() {
-                if name == randomName {
-                    DataManager.names.remove(at: index)
-                }
-            }
-        } else {
-            self.name = "ERROR!"
-        }
         
-        if let randomSecondName = DataManager.secondNames.randomElement() {
-            self.secondName = randomSecondName
-            for (index, secondName) in DataManager.secondNames.enumerated() {
-                if secondName == randomSecondName {
-                    DataManager.secondNames.remove(at: index)
-                }
-            }
-        } else {
-            self.secondName = "ERROR!"
-        }
+        name = setProperty(propertys: &DataManager.names)
+        secondName = setProperty(propertys: &DataManager.secondNames)
+        phoneNumber = setProperty(propertys: &DataManager.phoneNumbers)
+        emailAddress = setProperty(propertys: &DataManager.emails)
         
-        if let randomPhone = DataManager.phoneNumbers.randomElement() {
-            self.phoneNumber = randomPhone
-            for (index, phone) in DataManager.phoneNumbers.enumerated() {
-                if phone == randomPhone {
-                    DataManager.phoneNumbers.remove(at: index)
+    }
+    
+    private func setProperty(propertys: inout [String]) -> String {
+        if let randomProperty = propertys.randomElement() {
+            for (index, property) in propertys.enumerated() {
+                if property == randomProperty {
+                    propertys.remove(at: index)
                 }
             }
+            return randomProperty
         } else {
-            self.phoneNumber = "ERROR!"
-        }
-        
-        if let randomEmail = DataManager.emails.randomElement() {
-            self.emailAddress = randomEmail
-            for (index, email) in DataManager.emails.enumerated() {
-                if email == randomEmail {
-                    DataManager.emails.remove(at: index)
-                }
-            }
-        } else {
-            self.emailAddress = "ERROR!"
+            return "ERROR!"
         }
     }
+    
 }

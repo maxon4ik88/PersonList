@@ -33,14 +33,14 @@
                             <outlet property="delegate" destination="CxM-tK-cUU" id="jU5-JX-aXw"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="person.crop.circle" catalog="system" id="Fh5-Cw-tib"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.crop.circle" catalog="system" id="Fh5-Cw-tib"/>
                     <navigationItem key="navigationItem" title="Persons List" id="2kv-8Z-auz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3H-Ec-1yo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1326" y="155"/>
         </scene>
-        <!--Item-->
+        <!--Second Table View Controller-->
         <scene sceneID="Bsl-Lz-PUf">
             <objects>
                 <tableViewController id="SAt-Xm-Mev" customClass="SecondTableViewController" customModule="HW2_7" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,12 +49,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondContactCell" id="pe1-5N-wcI">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondContactCell" textLabel="dtA-3D-o9Q" style="IBUITableViewCellStyleDefault" id="pe1-5N-wcI">
                                 <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pe1-5N-wcI" id="W8Y-EQ-jyO">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dtA-3D-o9Q">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -63,7 +72,7 @@
                             <outlet property="delegate" destination="SAt-Xm-Mev" id="i3H-nb-vu1"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="person.circle.fill" catalog="system" id="yms-I3-lIy"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.circle.fill" catalog="system" id="yms-I3-lIy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiO-2W-mhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

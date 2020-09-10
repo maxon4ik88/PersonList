@@ -29,5 +29,8 @@ class DataManager {
     
     static let countPersons = persons.count
     
-    static var persons = [Person(), Person(), Person(), Person(), Person(), Person(), Person(), Person(), Person(), Person()]
+    static var persons = [Person(), Person(), Person(),
+                          Person(), Person(), Person(),
+                          Person(), Person(), Person(),
+                          Person()]
 }
